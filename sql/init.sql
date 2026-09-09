@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS clientes (
 -- Datos iniciales de demostración
 INSERT INTO clientes (nombre, correo, telefono, edad) VALUES
 ('Carlos Mendoza', 'carlos.mendoza@email.com', '0991234567', 28),
-('Lucía Fernández', 'lucia.f@email.com', '0987654321', 34);
+('Lucia Fernandez', 'lucia.f@email.com', '0987654321', 34);
