@@ -1,5 +1,4 @@
 services:
-  # Servidor Web Apache + PHP 8.2
   web:
     build: .
     container_name: crm_web
@@ -11,7 +10,6 @@ services:
       - db
     restart: always
 
-  # Servidor de Base de Datos MySQL 8.0
   db:
     image: mysql:8.0
     container_name: crm_db
@@ -26,9 +24,9 @@ services:
       - db_data:/var/lib/mysql
       - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-  # Gestor visual phpMyAdmin
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:apache
+    platform: linux/arm64
     container_name: crm_phpmyadmin
     restart: always
     ports:
